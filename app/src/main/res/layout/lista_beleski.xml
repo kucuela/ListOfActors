@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:fab="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:background="@android:color/white"
+                                                 android:fitsSystemWindows="true"
+                                                 tools:context="studio.kucuela.listofactors.ListActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/linearLayout"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+
+                  android:orientation="vertical">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="?attr/colorPrimary"
+            android:elevation="10dp"
+
+            android:minHeight="?attr/actionBarSize"
+            android:padding="5dp"
+            android:theme="?attr/actionBarTheme"
+            app:subtitle="click on a + button to add new actor"
+            app:subtitleTextColor="@android:color/white"
+            app:title="LIST OF ACTORS"
+            app:titleTextColor="@android:color/white"/>
+
+
+
+
+
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+            >
+
+            <ListView
+
+                android:id="@+id/listaGlumaca"
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:layout_height="match_parent"
+                android:dividerHeight="1dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/menu_down"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="500dp"
+        android:elevation="24dp"
+        android:onClick="onClickButton1"
+        android:src="@drawable/addglumac"
+        app:fab_colorNormal="@color/colorAccent"
+        app:fab_elevationCompat="15dp"
+        app:fab_showShadow="true"
+        app:layout_anchor="@+id/linearLayout"
+        app:layout_anchorGravity="right|bottom">
+
+
+    </com.github.clans.fab.FloatingActionButton>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

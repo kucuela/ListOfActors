@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:tools="http://schemas.android.com/tools"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+                                                 android:id="@+id/coordinator1"
+                                                 xmlns:fab="http://schemas.android.com/apk/res-auto"
+                                                 android:fitsSystemWindows="true">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="10dp"
+        android:gravity="center_vertical"
+
+        android:minHeight="?attr/actionBarSize"
+        android:padding="5dp"
+        android:theme="?attr/actionBarTheme"
+        app:subtitle="click on a save button when you're done"
+        app:subtitleTextColor="@android:color/white"
+        app:title="ADD NEW ACTOR"
+        app:titleTextColor="@android:color/white"/>
+
+    <LinearLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/naslov"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="225dp"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:hint="Name"
+            android:inputType="textCapWords"
+            android:maxWidth="300dp"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <EditText
+            android:id="@+id/opis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/naslov"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:hint="Short bio "
+            android:inputType="textCapSentences"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <EditText
+            android:id="@+id/datum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/opis"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:hint="Year of birth"
+            android:inputType="date"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <EditText
+            android:id="@+id/ocena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/opis"
+            android:layout_marginLeft="15dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:hint="Rating (0-10)"
+            android:inputType="date"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"/>
+
+
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/menu_down2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        android:elevation="24dp"
+        android:onClick="onclickdugme"
+        android:src="@drawable/saveb"
+        app:fab_colorNormal="@color/colorAccent"
+        app:fab_colorPressed="@color/colorPrimary"
+        app:fab_showShadow="true"
+        app:layout_anchor="@+id/linearLayout3"
+        app:layout_anchorGravity="right|bottom">
+    </com.github.clans.fab.FloatingActionButton>
+
+</android.support.design.widget.CoordinatorLayout>
